@@ -95,13 +95,37 @@ body {
     padding: 0rem 3rem;
 }
 
+.small-mb {
+    margin-bottom: 1.7rem;
+}
+
+.large-mb {
+    margin-bottom: 5rem;
+}
+
+.small-mt {
+    margin-top: 1rem;
+}
+
 .text-highlight {
-    color: rgb(120, 136, 141);
+    color: rgb(67, 114, 129);
+}
+
+.warning {
+    color: rgb(255, 69, 69);
+}
+
+.bold {
+    font-weight: 600;
 }
 
 h2 a {
     text-decoration: underline;
-    color: rgb(32, 166, 232);
+    color: rgb(26, 123, 168);
+}
+
+.none {
+    display: none !important; 
 }
 
 /* ----------------------------- NAV BAR STYLES ------------------ */
@@ -124,7 +148,7 @@ h2 a {
     max-width: 3rem;
 }
 
-.nav {
+.mobile-nav {
     background: rgba(224, 224, 224, 0.934);
     transition: ease .3s;
     position: absolute;
@@ -140,9 +164,6 @@ h2 a {
     transform: translateX(100%);
 }
 
-.none {
-    display: none;
-}
 
 .nav {
     display: flex;
@@ -171,6 +192,14 @@ h2 a {
     margin-bottom: 2rem;
 }
 
+.nav-social-icon {
+    min-width: 4rem;
+    padding: .7rem;
+    transition-duration: .2s;
+}
+.nav-social-icon:active {
+    transform: scale(0.9);
+}
 
 
 
@@ -178,17 +207,27 @@ h2 a {
 
 /* =========================== BODY ===================== */
 
-.main, .section, article, .wrapper {
+.main, .section, article, .wrapper, .footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.main {
+
+.funds, .funds article, .about-me, .footer {
+    align-items: left;
+    text-align: left;
+}
+
+.learn-free, .learn-free .wrapper .learn-free-box {
+    align-items: center;
     text-align: center;
+}
+
+
+.main {
     line-height: 2rem;
 }
 
-.section, .footer {
+.section {
     position: relative;
     padding: 6rem 0rem;
 }
@@ -210,24 +249,25 @@ h2 a {
     font-weight: bold;
     font-size: 2.3rem;
     margin-bottom: 3rem;
-    line-height: 2.6rem;
+    line-height: 2.7rem;
 }
 .h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    line-height: 2.4rem;
+    line-height: 2.5rem;
 
 }
 
 .p {
     font-size: 1.6rem;
+    line-height: 2rem;
 }
 .ppadding {
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
 }
 .arrow-icon {
-    max-width: 2rem;
+    max-width: 2rem !important;
     margin-bottom: 2rem;
 }
 
@@ -235,21 +275,268 @@ h2 a {
     margin: 1rem 0rem;
 }
 
-@media only screen and (max-width: 60rem){
-    p, h1, h2 {
-        text-align: center;
-        max-width: 90%;
-    }
+
+.funds img {
+    margin-bottom: 5rem;
 }
 
+.fund-btn {
+   background-color: rgb(120, 136, 141);
+   padding: 2rem 3rem;
+   border-radius: 100rem;
+   color: white;
+   font-size: 1.5rem;
+   transition-duration: .1s;
+}
 
-
-.funds .wrapper, .fund-footer{
+.fund-list {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.funds img {
-    margin-bottom: 5rem;
+.about-me-item {
+    margin-bottom: 1.5rem;
+}
+.about-me-list a {
+    text-decoration: underline;
+}
+
+.fund-btn:active {
+    transform: scale(0.9);
+    background-color: rgb(59, 110, 126);
+}
+
+
+.footer {
+    padding: 6rem 3rem;
+}
+p, h1, h2 {
+    max-width: 95%;
+}
+
+.youtube {
+    aspect-ratio: 16 / 9;
+    margin: 1rem 0rem 2rem 0;
+
+}
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: 35rem){
+    .main, .footer {
+        padding: 0rem 5rem;
+    }
+
+    .main img, iframe, h1, h2, p {
+        max-width: 50rem;
+    }
+
+    .funds, .funds article, .about-me, .footer {
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+
+
+@media only screen and (min-width: 55rem){
+    .main, .footer {
+        padding: 0rem 5rem;
+    }
+
+    .h1 {
+        margin-bottom: 7rem;
+    }
+
+    .fund-footer h2 {
+        margin-bottom: 3rem;
+    }
+
+    .fund-footer p {
+        margin-bottom: 3rem;
+    }
+
+    .h2m {
+        margin-top: 4rem;
+    }
+
+    .main img, iframe, h1, h2, p {
+        max-width: 60rem;
+    }
+
+    .funds, .funds article, .about-me, .footer {
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .close-nav, .open-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        background: transparent;
+        transition: ease .3s;
+        position: static;
+        width: auto;
+        height: auto;
+    } 
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .nav-list {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        padding: 0;
+        margin:0;
+        font-size: 1.4rem !important;
+    }
+
+    .nav-icon-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+
+@media only screen and (min-width: 60rem) {
+    .learn-free .wrapper{
+        flex-direction: row;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main {
+        max-width: 90rem;
+    }
+
+    .learn-free-box {
+        max-width: 30rem;
+        border-radius: .5rem;
+        padding: 2rem 1rem;
+        margin: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+
+    .funds {
+        display: block;
+    }
+
+    .fund-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center !important;
+    }
+
+    .fund-box .wrapper {
+        max-width:40rem;
+        margin-bottom: 5rem;
+        border-radius: .5rem;
+        padding: 3rem 0rem;
+    }
+
+    .fund-box img {
+        max-width: 35rem;
+        display: block;
+    }
+
+    .fund-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fund-list {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .fund-btn {
+        flex-basis: 25rem;
+        font-size: 1.6rem;
+    }
+
+    .small-mb {margin: 0}
+    .small-mt {margin: 0;}
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .about-me-box .wrapper {
+        flex-basis: 40rem;
+    }
+
+    .funds, .funds article, .about-me, .footer {
+        align-items: start;
+        text-align: left;
+    }
+    .nav {
+        padding-left: 10rem;
+        padding-right:10rem;
+    }
+
+    iframe, .about-me img {
+        width: 40rem;
+    }
+
+    .footer {
+        padding-top: 6rem;padding-bottom: 6rem;
+    }
+
+    .footer p, .footer h2 {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 70rem) {
+    .footer p, .footer h2 {
+        max-width: 80rem;
+    }
+
+    main {
+        max-width: 100rem;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav {
+        flex-basis: 120rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fund-btn {
+        flex-basis: 31rem;
+    }
 }
